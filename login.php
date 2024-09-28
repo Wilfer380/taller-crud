@@ -1,7 +1,5 @@
 <?php
-//session_start();
 
-//session_destroy();
 
 
 ?>
@@ -52,11 +50,11 @@
     <form action="controller/loginController.php" method="post">
     <div class="m-2 col-md-6">
     <label for="exampleFormControlInput1" class="form-label">Email address</label>
-    <input type="email" name="email" class="form-control" placeholder="name@example.com">
+    <input type="email" name="email" class="form-control" placeholder="name@example.com" value="juan.perez@example.com">
     </div>
     <div class="m-2 col-md-6">
     <label for="exampleFormControlInput1" class="form-label">password</label>
-    <input type="pass" name="pass" class="form-control" placeholder="password">
+    <input type="pass" name="pass" class="form-control" placeholder="password" value="password1">
     </div>
 
     <div class="m-2 col-md-6">

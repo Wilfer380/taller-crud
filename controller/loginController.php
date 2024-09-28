@@ -5,7 +5,7 @@ require_once("../bd/conexion.php");
 $email = $_POST["email"];
 $pass =  $_POST["pass"];
 
-$sql = "select * from usuarios where email='$email' and pass='$pass' ;";
+$sql = "SELECT * FROM usuarios WHERE email='$email' AND pass='$pass'";
 
 //los aprendices deben realizar estas sentencias sql, a traves de
 //prepared statement, para prevenir ataques sql.
@@ -19,16 +19,20 @@ if ($result->num_rows > 0){
     //$idrol= $fila ["id"];
     //$sql = "select * from rloes where id= '$idrol'";
     $_SESSION ['nombre'] = $usuario ["nombre"];
-
-   if ( $usuario["roles_id"] ==1){
+    $_SESSION['id'] = $usuario ["id"];
+    
+   if ( $usuario["roles_id"] == 1){
+ 
       $_SESSION['rol'] = 'admin';
    } else{
     $_SESSION['rol'] = 'user';
    }
+   echo  $usuario ["id"];
     header('location: ../usuarios.php');
-
+   echo "erro1";
 }else{
     header('location: ../login.php');
+   
 }
 
 
